@@ -1,0 +1,29 @@
+<h1>Your Todos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Items</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for item <- @items do %>
+    <tr>
+      <td><%= item.todoItem %></td>
+
+      <td>
+        <span><%= link "Edit", class: "btn btn-primary", to: Routes.item_path(@conn, :edit, item) %></span>
+        <span><%= link "Done", class: "btn btn-primary", to: Routes.item_path(@conn, :delete, item), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<div class="fixed-action-btn">
+  <%= link to: Routes.item_path(@conn, :new), class: "btn-floating btn-large waves-effect waves-light red" do %>
+    <i class="material-icons"> add </i>
+  <% end %>
+</div>

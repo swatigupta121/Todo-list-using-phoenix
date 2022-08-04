@@ -1,8 +1,16 @@
 /* This file is for your main application CSS */
 @import "./phoenix.css";
-
+.links {
+  font-size:large;
+}
+.x {
+  font-size: medium;
+  text-transform: capitalize;
+  margin-top: 20px;
+}
 /* Alerts and form errors used by phx.new */
 .alert {
+  font-size: medium;
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;

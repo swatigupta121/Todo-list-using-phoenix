@@ -1,0 +1,11 @@
+
+<ul>
+
+  <li>
+    <strong>Your Todo item is successfully added/updated in the List!!</strong>
+  </li>
+
+</ul>
+
+<span class="links"><%= link "Edit", to: Routes.item_path(@conn, :edit, @item) %></span> |
+<span class="links"><%= link "Back", to: Routes.item_path(@conn, :index) %></span>
